@@ -13,6 +13,9 @@ a{
 body{
   background-image: url("Images/brik-black-012.jpg");
   background-repeat: repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
 .banner{
@@ -70,28 +73,34 @@ body{
 .cosmos-text h1, p, a{
   font-family: 'Comfortaa';
 }
+
 .cosmos-text h1{
   text-transform: uppercase;
-  padding-bottom: 55px;
-  font-size: 50px;
+  margin-bottom: 50px;
+  font-size: 3.5em;
   color: #fff;
-  letter-spacing: 10px;
+  letter-spacing: 0.2em;
 }
+
 .cosmos-text p{
-  font-size: 23px;
-  margin: 0 45px;
+  font-size: 1.3em;
+  margin: 0 45px 10px 45px;
   text-align: center;
-  line-height: 27px;
+  line-height: 1.3em;
   color: #000;
-  padding-bottom: 10px;
   text-shadow: -7px 5px 15px rgba(255,255,255, 0.7);
 }
+
+.hide{
+  display: none;
+}
+
 .cosmos-text a{
   display: block;
   margin: 0 auto;
   padding: 5px;
   width: 35%;
-  font-size: 18px;
+  font-size: 1.2em;
   border: 2px solid #338EDE;
   border-radius: 15px;
   background-color: rgba(51,199,222, 0.2);
@@ -108,7 +117,8 @@ body{
 }
 .trigger-text h2{
   font-family: 'Press Start 2P';
-  font-size: 25px;
+  outline: 1px solid red;
+  font-size: 1.5em;
   margin: 50px auto;
   text-align: center;
   line-height: 35px;
@@ -121,6 +131,8 @@ body{
   height: 300px;
   background-image: url("Images/Stason.png");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: absolute;
   top: 26%;
   left: 35%;
@@ -128,9 +140,12 @@ body{
 }
 @-webkit-keyframes orbita{
   0%  {}
-  25% {left: 1000px; top: 50px; transform: rotate(-35deg);}
-  50% {}
-  75% {left: 0px; top: 250px; transform: rotate(45deg);}
+  20% {left: 80%; top: 10%; transform: rotate(-35deg);}
+  30% {}
+  50% {left: 10%; top: -10%; transform: rotate(45deg);}
+  60% {}
+  70% {left: -10%; top: 60%; transform: rotate(-15deg);}
+  85% {left: 80%; top: 60%; transform: rotate(150deg);}
   100% {}
 }
 
@@ -162,6 +177,6 @@ body{
   opacity: 0.1;
 }
 .wrapper:hover .stashead{
-  -webkit-animation: linear 10s orbita infinite 2s;
+  -webkit-animation: linear 5s orbita infinite 1s;
   visibility: visible;
 }
