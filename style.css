@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Georgia, Times, serif;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+body{
+  background-image: url("images/brik-black-012.jpg");
+  background-repeat: repeat;
+}
+
+.banner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-img{
+  width: 500px;
+  height: 300px;
+  border: 3px solid #000;
+  overflow: hidden;
+}
+.box-img img{
+  width: 500px;
+  height: 300px;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.container::before, .container::after{
+  content: ".";
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("images/59c51015c803715ea9c6d53b.jpg");
+  opacity: 0;
+}
+
+.container::before{
+  transform: translate(-125%) rotate(45deg);
+}
+.container::after{
+  transform: translate(125%) rotate(45deg);
+}
+
+.cosmos-text{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 17%;
+  text-align: center;
+}
+.cosmos-text h1, p, a{
+  font-family: 'Comfortaa';
+}
+.cosmos-text h1{
+  text-transform: uppercase;
+  padding-bottom: 55px;
+  font-size: 50px;
+  color: #fff;
+  letter-spacing: 10px;
+}
+.cosmos-text p{
+  font-size: 23px;
+  margin: 0 45px;
+  text-align: center;
+  line-height: 27px;
+  color: #000;
+  padding-bottom: 10px;
+  text-shadow: -7px 5px 15px rgba(255,255,255, 0.7);
+}
+.cosmos-text a{
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  width: 35%;
+  font-size: 18px;
+  border: 2px solid #338EDE;
+  border-radius: 15px;
+  background-color: rgba(51,199,222, 0.2);
+}
+.trigger-text{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+}
+.trigger-text h2{
+  font-family: 'Press Start 2P';
+  font-size: 25px;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 35px;
+  text-shadow: -15px 10px 20px rgba(0,0,0, .9);
+  text-transform: uppercase;
+}
+
+.stashead{
+  width: 300px;
+  height: 300px;
+  background-image: url("images/stason.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 26%;
+  left: 35%;
+  visibility: hidden;
+}
+@-webkit-keyframes orbita{
+  0%  {}
+  25% {left: 1000px; top: 50px; transform: rotate(-35deg);}
+  50% {}
+  75% {left: 0px; top: 250px; transform: rotate(45deg);}
+  100% {}
+}
+
+/*------------------- HOVER -------------------*/
+.box-img:hover .cosmos-text{
+  visibility: hidden;
+}
+.box-img:hover .trigger-text{
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+.box-img:hover .trigger-text h2{
+  transform: scale(2);
+  transition: 3s ease-in-out 0.2s;
+}
+.box-img:hover img{
+  transform: rotate(-4deg) scale(1.1);
+  transition: 2s ease-in-out 0.5s;
+  filter: blur(1px);
+}
+.box-img:hover .container::before{
+  transform: translateX(10%) rotate(180deg) scale(1.5);
+  transition: .2s;
+  opacity: 0.1;
+}
+.box-img:hover .container::after{
+  transform: translateX(-10%) rotate(-177deg) scale(1.5);
+  transition: .2s ease-in-out;
+  opacity: 0.1;
+}
+.wrapper:hover .stashead{
+  -webkit-animation: linear 10s orbita infinite 2s;
+  visibility: visible;
+}
