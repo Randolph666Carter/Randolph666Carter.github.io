@@ -54,7 +54,7 @@
 }
 
 
-@media all and (max-width: 768px), and (orientation: landscape){
+@media all and (max-width: 768px){
   .trigger-text h2{
     font-size: 1.1em;
     margin: 30px auto;
@@ -75,7 +75,7 @@
   }
 
 }
-@media all and (max-width: 500px){
+@media all and (max-width: 500px), and (orientation: landscape){
   .cosmos-text h1{
     font-size: 1.5em;
     margin-bottom: 25px;
@@ -84,7 +84,6 @@
   .cosmos-text p{
     font-size: 1.5em;
     margin: 0;
-    text-shadow: -2px 1px 7px rgba(255,255,255, 0.7);
   }
 
   .trigger-text h2{
@@ -111,5 +110,42 @@
     70% {left: 0%; top: 70%; transform: rotate(-15deg);}
     85% {left: 60%; top: 70%; transform: rotate(150deg);}
     100% {}
+  }
+}
+@media all and (max-width: 320px){
+  .cosmos-text h1{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: red;
+  }
+
+  .cosmos-text p{
+    font-size: 0.9em;
+    margin: 0;
+    color: #fff;
+  }
+
+  .cosmos-text a{
+    width: 35%;
+    font-size: 0.5em;
+    margin-top: 20px;
+  }
+
+  .trigger-text h2{
+    font-size: 0.7em;
+    margin: 5px auto;
+  }
+  .box-img:hover .trigger-text h2{
+    transform: scale(1.2);
+  }
+
+  .box-img, .container::before, .container::after{
+    width: 250px;
+    height: 150px;
+  }
+  .stashead{
+    top: 40%;
+    width: 110px;
+    height: 110px;
   }
 }
