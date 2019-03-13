@@ -103,12 +103,12 @@
 
   @-webkit-keyframes orbita{
     0%  {}
-    20% {left: 60%; top: 10%; transform: rotate(-35deg);}
+    20% {left: 50%; top: 10%; transform: rotate(-35deg);}
     30% {}
     50% {left: 10%; top: 0%; transform: rotate(45deg);}
     60% {}
     70% {left: 0%; top: 70%; transform: rotate(-15deg);}
-    85% {left: 60%; top: 70%; transform: rotate(150deg);}
+    85% {left: 50%; top: 70%; transform: rotate(150deg);}
     100% {}
   }
 }
@@ -149,12 +149,12 @@
   }
    @-webkit-keyframes orbita{
     0%  {}
-    20% {left: 40%; top: 10%; transform: rotate(-35deg);}
+    20% {left: 50%; top: 10%; transform: rotate(-35deg);}
     30% {}
     50% {left: 10%; top: 0%; transform: rotate(45deg);}
     60% {}
     70% {left: 0%; top: 50%; transform: rotate(-15deg);}
-    85% {left: 40%; top: 50%; transform: rotate(150deg);}
+    85% {left: 50%; top: 50%; transform: rotate(150deg);}
     100% {}
   }
 }
