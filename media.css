@@ -87,10 +87,12 @@
   }
 
   .trigger-text h2{
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin: 10px auto;
   }
-
+  .box-img:hover .trigger-text h2{
+  transform: scale(1.2);
+  }
   .box-img, .container::before, .container::after{
     width: 300px;
     height: 200px;
@@ -135,7 +137,7 @@
     margin: 5px auto;
   }
   .box-img:hover .trigger-text h2{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   .box-img, .container::before, .container::after{
